@@ -1,0 +1,16 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)..\build\Package.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)\..\build\Package.Build.props')" />
+  <Import Project="$(MSBuildThisFileDirectory)..\build\Feature.Build.props" />
+  <PropertyGroup>
+    <ArtifactsPath>$(MSBuildThisFileDirectory)..\..\artifacts</ArtifactsPath>
+    <SerenityVersion Condition="'$(SerenityVersion)' == ''">10.3.1</SerenityVersion>
+    <SergenTransform>all</SergenTransform>
+    <TargetFramework>net10.0</TargetFramework>
+    <DotnetToolManifestFile>$(MSBuildProjectDirectory)\..\.config\dotnet-tools.json</DotnetToolManifestFile>
+    <DotnetToolRestoreStamp>$(MSBuildProjectDirectory)\..\.config\.restore-stamp</DotnetToolRestoreStamp>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="$(MSBuildProjectName).MVC.ESM" Alias="ESM" />
+    <NpmPackageFile Include="$(MSBuildThisFileDirectory)..\..\package.json" Condition="Exists('$(MSBuildProjectDirectory)\package.json')" />
+  </ItemGroup>
+</Project>
