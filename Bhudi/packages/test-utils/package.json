@@ -1,8 +1,0 @@
-{
-  "name": "test-utils",
-  "private": true,
-  "devDependencies": {
-    "@serenity-is/corelib": "workspace:*"
-  },
-  "type": "module"
-}

@@ -1,4 +1,0 @@
-local: true
-packageurl:
-    sleekgrid:
-        '/sleekgrid/assets/local'

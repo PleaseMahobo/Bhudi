@@ -1,2 +1,0 @@
-
-export default () => {{QIMPORT "gridPageInit"}}({{IMPORTFROM "./" + GridClassName GridClassName}});
